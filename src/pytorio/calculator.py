@@ -89,8 +89,8 @@ def calc_bonus_multipliers(module_setups: dict) -> tuple:
 
 
 def calc_combined_multipliers(combined_module_setups: dict, beacon_multiplier: float = 0.5) -> tuple:
-    machine_bonuses = calc_bonus_multipliers(combined_module_setups['machine'])
-    beacon_bonuses = calc_bonus_multipliers(combined_module_setups['beacon'])
+    machine_bonuses = calc_bonus_multipliers(combined_module_setups["machine_modules"])
+    beacon_bonuses = calc_bonus_multipliers(combined_module_setups["beacon_modules"])
 
     beacon_amount = combined_module_setups['beacon_amount']
     return [1 + mb + (bb * beacon_amount * beacon_multiplier) for (mb, bb) in zip(machine_bonuses, beacon_bonuses)]
@@ -106,13 +106,13 @@ def module_selector_vanilla_max(recipe_name: str, machine_name: str):
     machine_module_name = 'productivity-module-3' if recipe_name in productivity_module_limitations else 'speed-module-3'
 
     return {
-        'machine': {
+        "machine_modules": {
             machine_module_name: module_inventory_size
         },
-        'beacon': {
-            'speed-module-3': 2
+        "beacon_modules": {
+            "speed-module-3": 2
         },
-        'beacon_amount': 8
+        "beacon_amount": 8
     }
 
 
@@ -214,7 +214,7 @@ def build_production_tree(item_rate: int,
                     production_tree.update({'productivity_multipiler': productivity_multipiler})
 
                 if combined_module_setups != None:
-                    production_tree.update({'combined_module_setups': combined_module_setups})
+                    production_tree.update(combined_module_setups)
 
                 production_tree.update({
                     'machine_name': machine_name,

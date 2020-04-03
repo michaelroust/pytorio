@@ -1,5 +1,7 @@
 from pytorio.prototype_loader import recipes, machines, items
 
+ROUNDING_DECIMALS = 3
+
 # Idea: Add a function that picks the first/default recipe it finds for items with many recipes
 
 
@@ -123,8 +125,6 @@ def build_production_tree(item_rate: int,
                           prefered_recipes: dict = {},
                           prefered_machines: list = [],
                           module_selector=None) -> dict:
-
-    ROUNDING_DECIMALS = 3
 
     production_tree = {
         'item_type': item_type,

@@ -1,5 +1,8 @@
 
 
+## WIP
+Will be more informative soon enough
+
 ### Install requirements
 ```bash
     python3 -m venv env

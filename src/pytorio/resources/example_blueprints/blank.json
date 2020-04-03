@@ -1,0 +1,18 @@
+{
+    "blueprint": {
+        "entities": [],
+        "tiles": [],
+        "icons": [
+            {
+                "index": 1,
+                "signal": {
+                    "name": "signal-info",
+                    "type": "virtual"
+                }
+            }
+        ],
+        "item": "blueprint",
+        "label": "examples",
+        "version": 73017917444
+    }
+}

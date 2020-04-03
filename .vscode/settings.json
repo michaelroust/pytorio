@@ -1,0 +1,41 @@
+{
+    // "git.enabled": false,
+
+
+    //========================================================================
+    // python
+    "files.exclude": {
+        "**/*.pyc": {"when": "$(basename).py"},
+        "**/__pycache__": true,
+    },
+
+    "python.pythonPath": "env/bin/python",
+
+    //========================================================================
+    // pylint
+
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    // Path issue https://github.com/microsoft/vscode-python/issues/2791
+    "python.autoComplete.extraPaths": [
+        "./src"
+    ],
+
+    //========================================================================
+    // unitest
+
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./test",
+        "-p",
+        "*test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfArgs": ["--style={column_limit: 120}"],
+    "[python]": { "editor.formatOnSave": true },
+    //========================================================================
+}

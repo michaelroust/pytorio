@@ -1,0 +1,1119 @@
+{
+    "blueprint": {
+        "entities": [
+            {
+                "entity_number": 1,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": -37
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 2,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": -37
+                }
+            },
+            {
+                "entity_number": 3,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": -37
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 4,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": -37
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 5,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": -37
+                }
+            },
+            {
+                "entity_number": 6,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": -33
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 7,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": -33
+                }
+            },
+            {
+                "entity_number": 8,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": -33
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 9,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": -33
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 10,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": -33
+                }
+            },
+            {
+                "entity_number": 11,
+                "name": "medium-electric-pole",
+                "position": {
+                    "x": 0,
+                    "y": -35
+                }
+            },
+            {
+                "entity_number": 12,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": -30
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 13,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": -30
+                }
+            },
+            {
+                "entity_number": 14,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": -30
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 15,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": -30
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 16,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": -30
+                }
+            },
+            {
+                "entity_number": 17,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": -26
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 18,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": -26
+                }
+            },
+            {
+                "entity_number": 19,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": -26
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 20,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": -26
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 21,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": -26
+                }
+            },
+            {
+                "entity_number": 22,
+                "name": "medium-electric-pole",
+                "position": {
+                    "x": 0,
+                    "y": -28
+                }
+            },
+            {
+                "entity_number": 23,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": -23
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 24,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": -23
+                }
+            },
+            {
+                "entity_number": 25,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": -23
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 26,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": -23
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 27,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": -23
+                }
+            },
+            {
+                "entity_number": 28,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": -19
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 29,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": -19
+                }
+            },
+            {
+                "entity_number": 30,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": -19
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 31,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": -19
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 32,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": -19
+                }
+            },
+            {
+                "entity_number": 33,
+                "name": "medium-electric-pole",
+                "position": {
+                    "x": 0,
+                    "y": -21
+                }
+            },
+            {
+                "entity_number": 34,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": -16
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 35,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": -16
+                }
+            },
+            {
+                "entity_number": 36,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": -16
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 37,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": -16
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 38,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": -16
+                }
+            },
+            {
+                "entity_number": 39,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": -12
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 40,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": -12
+                }
+            },
+            {
+                "entity_number": 41,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": -12
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 42,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": -12
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 43,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": -12
+                }
+            },
+            {
+                "entity_number": 44,
+                "name": "medium-electric-pole",
+                "position": {
+                    "x": 0,
+                    "y": -14
+                }
+            },
+            {
+                "entity_number": 45,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": -9
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 46,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": -9
+                }
+            },
+            {
+                "entity_number": 47,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": -9
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 48,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": -9
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 49,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": -9
+                }
+            },
+            {
+                "entity_number": 50,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": -5
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 51,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": -5
+                }
+            },
+            {
+                "entity_number": 52,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": -5
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 53,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": -5
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 54,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": -5
+                }
+            },
+            {
+                "entity_number": 55,
+                "name": "medium-electric-pole",
+                "position": {
+                    "x": 0,
+                    "y": -7
+                }
+            },
+            {
+                "entity_number": 56,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": -2
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 57,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": -2
+                }
+            },
+            {
+                "entity_number": 58,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": -2
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 59,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": -2
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 60,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": -2
+                }
+            },
+            {
+                "entity_number": 61,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": 2
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 62,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": 2
+                }
+            },
+            {
+                "entity_number": 63,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": 2
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 64,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": 2
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 65,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": 2
+                }
+            },
+            {
+                "entity_number": 66,
+                "name": "medium-electric-pole",
+                "position": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            {
+                "entity_number": 67,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": 5
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 68,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": 5
+                }
+            },
+            {
+                "entity_number": 69,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": 5
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 70,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": 5
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 71,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": 5
+                }
+            },
+            {
+                "entity_number": 72,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": 9
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 73,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": 9
+                }
+            },
+            {
+                "entity_number": 74,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": 9
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 75,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": 9
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 76,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": 9
+                }
+            },
+            {
+                "entity_number": 77,
+                "name": "medium-electric-pole",
+                "position": {
+                    "x": 0,
+                    "y": 7
+                }
+            },
+            {
+                "entity_number": 78,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": 12
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 79,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": 12
+                }
+            },
+            {
+                "entity_number": 80,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": 12
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 81,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": 12
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 82,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": 12
+                }
+            },
+            {
+                "entity_number": 83,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": 16
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 84,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": 16
+                }
+            },
+            {
+                "entity_number": 85,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": 16
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 86,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": 16
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 87,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": 16
+                }
+            },
+            {
+                "entity_number": 88,
+                "name": "medium-electric-pole",
+                "position": {
+                    "x": 0,
+                    "y": 14
+                }
+            },
+            {
+                "entity_number": 89,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": 19
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 90,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": 19
+                }
+            },
+            {
+                "entity_number": 91,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": 19
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 92,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": 19
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 93,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": 19
+                }
+            },
+            {
+                "entity_number": 94,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": 23
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 95,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": 23
+                }
+            },
+            {
+                "entity_number": 96,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": 23
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 97,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": 23
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 98,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": 23
+                }
+            },
+            {
+                "entity_number": 99,
+                "name": "medium-electric-pole",
+                "position": {
+                    "x": 0,
+                    "y": 21
+                }
+            },
+            {
+                "entity_number": 100,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": 26
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 101,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": 26
+                }
+            },
+            {
+                "entity_number": 102,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": 26
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 103,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": 26
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 104,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": 26
+                }
+            },
+            {
+                "entity_number": 105,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 0,
+                    "y": 30
+                },
+                "recipe": "iron-gear-wheel"
+            },
+            {
+                "direction": 6,
+                "entity_number": 106,
+                "name": "fast-inserter",
+                "position": {
+                    "x": -2,
+                    "y": 30
+                }
+            },
+            {
+                "entity_number": 107,
+                "name": "logistic-chest-requester",
+                "position": {
+                    "x": -3,
+                    "y": 30
+                },
+                "request_filters": [
+                    {
+                        "count": 80,
+                        "index": 1,
+                        "name": "iron-plate"
+                    }
+                ]
+            },
+            {
+                "direction": 6,
+                "entity_number": 108,
+                "name": "fast-inserter",
+                "position": {
+                    "x": 2,
+                    "y": 30
+                }
+            },
+            {
+                "bar": 2,
+                "entity_number": 109,
+                "name": "logistic-chest-active-provider",
+                "position": {
+                    "x": 3,
+                    "y": 30
+                }
+            },
+            {
+                "entity_number": 110,
+                "name": "medium-electric-pole",
+                "position": {
+                    "x": 0,
+                    "y": 28
+                }
+            }
+        ],
+        "icons": [
+            {
+                "index": 1,
+                "signal": {
+                    "name": "signal-info",
+                    "type": "virtual"
+                }
+            }
+        ],
+        "item": "blueprint",
+        "label": "main",
+        "tiles": [],
+        "version": 73017917444
+    }
+}

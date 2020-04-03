@@ -97,6 +97,9 @@ def calc_combined_multipliers(combined_module_setups: dict, beacon_multiplier: f
 
 
 def module_selector_vanilla_max(recipe_name: str, machine_name: str):
+    """Example module selector function that specifies a 8x8 beacon setup with speed-module-3s.
+    And places productivty-module-3s into the machine if possible, otherwise speed-module-3s"""
+
     module_inventory_size = machines[machine_name]['module_inventory_size']
 
     productivity_module_limitations = items['productivity-module-3']['limitations']

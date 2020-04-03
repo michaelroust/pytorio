@@ -98,7 +98,7 @@ def calc_combined_multipliers(combined_module_setups: dict, beacon_multiplier: f
     return [1 + mb + (bb * beacon_amount * beacon_multiplier) for (mb, bb) in zip(machine_bonuses, beacon_bonuses)]
 
 
-def module_selector_vanilla_max(recipe_name: str, machine_name: str):
+def module_selector_vanilla_max(recipe_name: str, machine_name: str) -> dict:
     """Example module selector function that specifies a 8x8 beacon setup with speed-module-3s.
     And places productivty-module-3s into the machine if possible, otherwise speed-module-3s"""
 

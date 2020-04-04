@@ -15,7 +15,7 @@ def decode(exg_str: str) -> dict:
 
 def encode(blueprint_dict: dict) -> str:
     """Encodes a python dict into a factorio exchange string"""
-    return dict_to_json_str(json_str_to_exg_str(blueprint_dict))
+    return json_str_to_exg_str(dict_to_json_str(blueprint_dict))
 
 
 # =============================================================================
@@ -36,8 +36,8 @@ def exg_str_to_json_str(exg_str):
 def json_str_to_exg_str(json_str, versionByte='0'):
     """Converts a json string to a factorio exchange string"""
 
-    compressed_str = zlib.compress(json_str.encode('utf8'),
-                                   9)  # Compressing with zlib deflate using compression level 9
+    # Compressing with zlib deflate using compression level 9
+    compressed_str = zlib.compress(json_str.encode('utf8'), 9)
     encoded_bytes = base64.b64encode(compressed_str)  # Base64 encoding.
     exg_str = versionByte + encoded_bytes.decode()  # append version byte to front
     return exg_str

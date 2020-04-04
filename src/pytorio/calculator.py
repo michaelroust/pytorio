@@ -268,24 +268,72 @@ def list_production_tree_inputs(production_tree: dict) -> dict:
     return inputs
 
 
-# Not finished
-# def flatten_production_tree(production_tree: dict) -> dict:
-#     def combine_production_dicts(prod_dict1: list, prod_dict2: list):
-#         COMBINABLE_FIELDS = ['item_rate', 'machine_amount', 'recipe_rate']
-#
-#         for (recipe_name, info2) in prod_dict2.items():
-#             if recipe_name in prod_dict1:
-#                 info1 = prod_dict1[recipe_name]
-#
-#                 for field in COMBINABLE_FIELDS:
-#                     info1[field] += info2[field]
-#             else:
-#                 prod_dict1[recipe_name] = info2
-#
-#     def flatten_production_tree(production_tree: dict, tree_head: bool = False) -> dict:
-#         # prod_dict = {}
-#         pass
-#
-#     return flatten_production_tree(production_tree, True)
+#=============================================================================
+# Beware unreadable code down here
+
+
+def combine_prodution_lists(prod_list1: list, prod_list2: list):
+    def recipe_index(recipe_name: str, prod_list: list) -> int:
+        i = 0
+        for prod_node in prod_list:
+            if recipe_name == prod_node['recipe_name']:
+                return i
+
+            i += 1
+        return -1
+
+    COMBINABLE_FIELDS = ['item_rate', 'machine_amount', 'recipe_rate']
+
+    for node2 in prod_list2:
+        recipe_name = node2['recipe_name']
+        rl1_index = recipe_index(recipe_name, prod_list1)
+        if rl1_index != -1:
+            node1 = prod_list1[rl1_index]
+            for field in COMBINABLE_FIELDS:
+                node1[field] += node2[field]
+
+            i = 0
+            for ingredient2 in node2['ingredients']:
+                ingredient1 = node1['ingredients'][i]
+                i += 1
+
+                ingredient1['item_rate'] = ingredient2['item_rate']
+
+                # i = 0
+                # for ingr2 in ingredients2:
+                #     ingr1 = ingredients1[i]
+                #     ingr1['item_rate'] += ingr2['item_rate']
+
+        else:
+            prod_list1.append(node2)
+
+
+def prod_tree_to_node(production_tree: dict) -> dict:
+    prod_node = None
+    if 'subtrees' in production_tree:
+        prod_node = production_tree.copy()
+        prod_node.pop('subtrees')
+
+        inputs = []
+        for subtree in production_tree['subtrees']:
+            COPY_KEYS = ['item_type', 'item_name', 'item_rate']
+            input_dict = {key: subtree[key] for key in COPY_KEYS}
+            inputs.append(input_dict)
+
+        prod_node['ingredients'] = inputs
+
+    return prod_node
+
+
+def flatten_production_tree(production_tree: dict) -> list:
+    prod_list = [prod_tree_to_node(production_tree)]
+
+    if 'subtrees' in production_tree:
+        for subtree in production_tree['subtrees']:
+            if 'subtrees' in subtree:
+                combine_prodution_lists(prod_list, flatten_production_tree(subtree))
+
+    return prod_list
+
 
 #=============================================================================

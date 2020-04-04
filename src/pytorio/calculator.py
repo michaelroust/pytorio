@@ -297,12 +297,15 @@ def combine_prodution_lists(prod_list1: list, prod_list2: list):
                 ingredient1 = node1['ingredients'][i]
                 i += 1
 
-                ingredient1['item_rate'] = ingredient2['item_rate']
+                ingredient1['item_rate'] += ingredient2['item_rate']
 
-                # i = 0
-                # for ingr2 in ingredients2:
-                #     ingr1 = ingredients1[i]
-                #     ingr1['item_rate'] += ingr2['item_rate']
+            if 'auxiliary_products' in node2:
+                i = 0
+                for aux_prod2 in node2['auxiliary_products']:
+                    aux_prod1 = node1['auxiliary_products'][i]
+                    i += 1
+
+                    aux_prod1['item_rate'] += aux_prod2['item_rate']
 
         else:
             prod_list1.append(node2)

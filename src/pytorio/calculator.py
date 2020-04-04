@@ -163,6 +163,14 @@ def build_production_tree(item_rate: int,
 
                     if speed_multiplier == 1 and productivity_multipiler == 1:
                         raise Warning('Didnt sepecify any modules or Possible multiplier calculation failure.')
+
+            elif recipe_name == 'rocket-part':  # Special hacky handling of rocket-parts
+                if module_selector != None:
+                    combined_module_setups = module_selector(recipe_name, 'assembling-machine-3')
+                    (speed_multiplier, productivity_multipiler) = calc_combined_multipliers(combined_module_setups)
+
+                    if speed_multiplier == 1 and productivity_multipiler == 1:
+                        raise Warning('Didnt sepecify any modules or Possible multiplier calculation failure.')
             else:
                 machine = None
 

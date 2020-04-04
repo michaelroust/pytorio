@@ -11,8 +11,6 @@
 
 
 ## Short term:
- - fix refactoring not working
- - cleanup information written to production_tree dict
  - prod_tree vs prod_list (using topological sort for dependecies). Maybe allow combinations of both...
 
 

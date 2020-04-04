@@ -239,3 +239,53 @@ def build_production_tree(item_rate: int,
     #-------------------------------------------------------------------------
 
     return production_tree
+
+
+#=============================================================================
+
+
+def list_production_tree_inputs(production_tree: dict) -> dict:
+    def combine_inputs(inputs1: dict, inputs2: dict):
+        for (input_name, input_rate) in inputs2.items():
+            # input_name = inp[0]
+            # input_rate = inp[1]
+            if input_name in inputs1.keys():
+                inputs1[input_name] += input_rate
+            else:
+                inputs1[input_name] = input_rate
+
+    inputs = dict()
+
+    if 'subtrees' in production_tree:
+        for subtree in production_tree['subtrees']:
+            combine_inputs(inputs, list_production_tree_inputs(subtree))
+    else:
+        item_name = production_tree['item_name']
+        item_rate = production_tree['item_rate']
+
+        combine_inputs(inputs, {item_name: item_rate})
+
+    return inputs
+
+
+# Not finished
+# def flatten_production_tree(production_tree: dict) -> dict:
+#     def combine_production_dicts(prod_dict1: list, prod_dict2: list):
+#         COMBINABLE_FIELDS = ['item_rate', 'machine_amount', 'recipe_rate']
+#
+#         for (recipe_name, info2) in prod_dict2.items():
+#             if recipe_name in prod_dict1:
+#                 info1 = prod_dict1[recipe_name]
+#
+#                 for field in COMBINABLE_FIELDS:
+#                     info1[field] += info2[field]
+#             else:
+#                 prod_dict1[recipe_name] = info2
+#
+#     def flatten_production_tree(production_tree: dict, tree_head: bool = False) -> dict:
+#         # prod_dict = {}
+#         pass
+#
+#     return flatten_production_tree(production_tree, True)
+
+#=============================================================================

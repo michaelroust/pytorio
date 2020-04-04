@@ -1,0 +1,37 @@
+{
+    "blueprint": {
+        "entities": [
+            {
+                "direction": 2,
+                "entity_number": 1,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": -2,
+                    "y": 0
+                },
+                "recipe": "processing-unit"
+            },
+            {
+                "direction": 2,
+                "entity_number": 2,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 1,
+                    "y": 0
+                },
+                "recipe": "empty-sulfuric-acid-barrel"
+            }
+        ],
+        "icons": [
+            {
+                "index": 1,
+                "signal": {
+                    "name": "assembling-machine-3",
+                    "type": "item"
+                }
+            }
+        ],
+        "item": "blueprint",
+        "version": 77310525440
+    }
+}

@@ -11,8 +11,8 @@
 
 
 ## Short term:
- - prod_tree vs prod_list (using topological sort for dependecies). Maybe allow combinations of both...
-
+ - generator with beacons
+ - mall creator
 
 
 ## No

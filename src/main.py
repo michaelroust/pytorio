@@ -27,8 +27,8 @@ def encode_blueprint_file(filename_in, filename_out):
 
 def foo():
     folder = 'src/pytorio/resources/example_blueprints/'
-    filename_in = folder + 'in.txt'
-    filename_out = folder + 'out.json'
+    filename_in = folder + 'bp.txt'
+    filename_out = folder + 'bp.json'
 
     decode_blueprint_file(filename_in, filename_out)
 

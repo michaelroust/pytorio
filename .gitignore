@@ -164,3 +164,7 @@ src/scratch2.py
 src/pytorio/resources/misc/
 
 src/scratch3.py
+
+src/pytorio/resources/example_blueprints/bp.json
+
+src/pytorio/resources/example_blueprints/bp.txt

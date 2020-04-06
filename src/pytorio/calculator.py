@@ -118,6 +118,15 @@ def module_selector_vanilla_max(recipe_name: str, machine_name: str) -> dict:
     }
 
 
+def which_inserter(rate_required: int):
+    if rate_required < 2.4:
+        return 'inserter'
+    elif rate_required < 6.7:
+        return 'fast-inserter'
+    else:
+        return 'stack-inserter'
+
+
 def build_production_tree(item_rate: int,
                           item_type: str,
                           item_name: str,
@@ -177,6 +186,7 @@ def build_production_tree(item_rate: int,
             #-------------------------------------------------------------------------
             # Main product
 
+            total_product_rate = 0
             main_product_per_recipe = -1
 
             for product in recipe["products"]:
@@ -187,12 +197,16 @@ def build_production_tree(item_rate: int,
             recipe_rate = item_rate / main_product_per_recipe
             production_tree.update({'recipe_rate': round(recipe_rate, ROUNDING_DECIMALS)})
 
+            total_product_rate += (recipe_rate * product['amount'] * product['probability'] * productivity_multipiler)
+
             #-------------------------------------------------------------------------
             # Auxiliary products
 
             auxiliary_products = []
             for product in recipe["products"]:
                 if product["name"] != item_name:
+                    total_product_rate += (recipe_rate * product['amount'] * product['probability'] *
+                                           productivity_multipiler)
                     auxiliary_products.append({
                         'item_type': product['type'],
                         'item_name': product['name'],
@@ -206,6 +220,7 @@ def build_production_tree(item_rate: int,
             #-------------------------------------------------------------------------
             # Machine stuff
 
+            machine_amount = 0
             if machine_name != None:
                 recipe_energy = recipe['energy']  # energy = base_craft_time
                 machine_base_speed = machine['crafting_speed']
@@ -234,13 +249,21 @@ def build_production_tree(item_rate: int,
 
             subtrees = []
 
+            total_ingredient_rate_per_machine = 0
             for ingredient in recipe["ingredients"]:
+                total_ingredient_rate_per_machine += (recipe_rate * ingredient["amount"]) / machine_amount
                 subtrees.append(
                     build_production_tree(recipe_rate * ingredient["amount"], ingredient["type"], ingredient["name"],
                                           shared_items, prefered_recipes, prefered_machines, module_selector))
 
             if len(subtrees) > 0:
                 production_tree.update({'subtrees': subtrees})
+
+            if machine_name != None:
+                production_tree.update({
+                    'input_inserter': which_inserter(total_ingredient_rate_per_machine),
+                    'output_inserter': which_inserter(total_product_rate / machine_amount)
+                })
 
             #-------------------------------------------------------------------------
 

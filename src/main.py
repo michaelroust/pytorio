@@ -97,4 +97,13 @@ def generate_factory_beacons(rate, item_name):
     easy_io.write_file(bp_str, output_folder + 'output.txt')
 
 
-generate_factory_beacons(10, 'utility-science-pack')
+# "automation-science-pack",
+# "logistic-science-pack",
+# "military-science-pack",
+# "chemical-science-pack",
+# "production-science-pack",
+# "utility-science-pack",
+# "space-science-pack",
+
+generate_factory_beacons(10, 'production-science-pack')
+# generate_factory_beacons(10, 'utility-science-pack')

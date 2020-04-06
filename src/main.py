@@ -25,7 +25,7 @@ def encode_blueprint_file(filename_in, filename_out):
     pass
 
 
-def foo():
+def decode_example_file():
     folder = 'src/pytorio/resources/example_blueprints/'
     filename_in = folder + 'bp.txt'
     filename_out = folder + 'bp.json'
@@ -33,12 +33,12 @@ def foo():
     decode_blueprint_file(filename_in, filename_out)
 
 
-# foo()
+# decode_example_file()
 
 #================================================
 
 
-def bar():
+def generate_factory():
     output_folder = 'src/pytorio/resources/misc/'
 
     shared_items = [
@@ -65,4 +65,4 @@ def bar():
     easy_io.write_file(bp_str, output_folder + 'output.txt')
 
 
-bar()
+generate_factory()

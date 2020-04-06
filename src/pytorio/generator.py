@@ -4,17 +4,22 @@ import math
 from .blueprint import *
 from .prototype_loader import recipes
 
-def add_single_am3_module(entities:list, x, y, recipe_name, request_filter_list, output_passive_provider_bar, am_direction=Direction.NORTH, machine_name="assembling-machine-3"):
+def add_single_am3_module(entities:list, x, y, recipe_name, request_filter_list, output_passive_provider_bar,
+                          am_direction=Direction.NORTH, machine_name="assembling-machine-3",
+                          input_inserter="fast-inserter", output_inserter="fast-inserter",
+                          items=None, power_pole=True):
     entities.extend([
-        Entity(machine_name, Position(x, y), recipe=recipe_name, direction=am_direction),
-        Entity("fast-inserter", Position(x - 1, y - 2), direction=Direction.NORTH),
+        Entity(machine_name, Position(x, y), recipe=recipe_name, direction=am_direction, items=items),
+        Entity(input_inserter, Position(x - 1, y - 2), direction=Direction.NORTH),
         Entity("logistic-chest-requester", Position(x - 1, y - 3),
                request_filter_list=request_filter_list
         ),
-        Entity("fast-inserter", Position(x + 1, y - 2), direction=Direction.SOUTH),
+        Entity(output_inserter, Position(x + 1, y - 2), direction=Direction.SOUTH),
         Entity("logistic-chest-passive-provider", Position(x + 1, y - 3), bar=output_passive_provider_bar),
-        Entity("medium-electric-pole", Position(x, y - 2))
     ])
+
+    if power_pole:
+        entities.append(Entity("medium-electric-pole", Position(x, y - 2)))
 
 
 def add_single_am3_unbarreler(entities:list, x, y, recipe_name, request_filter_list, direction):
@@ -26,14 +31,20 @@ def add_single_am3_unbarreler(entities:list, x, y, recipe_name, request_filter_l
         ),
         Entity("fast-inserter", Position(x + 1, y - 2), direction=Direction.SOUTH),
         Entity("logistic-chest-active-provider", Position(x + 1, y - 3)),
-        Entity("medium-electric-pole", Position(x, y - 2))
+        # Entity("medium-electric-pole", Position(x, y - 2))
     ])
 
 def add_single_am3_liquid_module(entities: list, x, y, recipe_name, request_filter_list,
                                  unbarrel_recipe_name, unbarreler_request_filter_list, output_passive_provider_bar):
 
-    add_single_am3_unbarreler(entities, x + 3, y, unbarrel_recipe_name, unbarreler_request_filter_list, Direction.EAST)
     add_single_am3_module(entities, x, y, recipe_name, request_filter_list, output_passive_provider_bar, Direction.EAST)
+    add_single_am3_unbarreler(entities, x + 3, y, unbarrel_recipe_name, unbarreler_request_filter_list, Direction.EAST)
+
+
+def add_single_speed_beacon(entities:list, x, y):
+    entities.append(
+        Entity("beacon", Position(x, y), items={"speed-module-3": 2})
+    )
 
 
 def assembler_liquid(prod_node):
@@ -89,7 +100,9 @@ def generate(prod_list:list):
                 barreler_filter_list.append(Logistic_Filter(ingr['item_name'] + '-barrel', (ingr['item_rate']/prod_node_machine_amount)*2))
 
         if len(barreler_filter_list) == 0:
-            add_single_am3_module(entities, j*3, i*5, prod_node['recipe_name'], requester_filter_list, 1, machine_name=prod_node['machine_name'])
+            add_single_am3_module(entities, j*3, i*5, prod_node['recipe_name'], requester_filter_list,
+                                  1, machine_name=prod_node['machine_name'], input_inserter=prod_node["input_inserter"],
+                                  output_inserter=prod_node["output_inserter"], power_pole=(j % 2 == 0 or j == (machines_per_row - 1)))
             j += 1
             total_assemblers_placed += 1
         elif len(barreler_filter_list) == 1:
@@ -106,3 +119,28 @@ def generate(prod_list:list):
             node_assemblers_placed = 0
 
     return Blueprint.to_dict(Blueprint(entities))
+
+# NOW
+# - Change generate to use inserters from calculation
+# - Build rows of beacons
+# - Only place power pole 1 out of 2
+
+
+# def generate_with_beacons(prod_list:list):
+#     total_assemblers_placed = 0
+#     total_assemblers = count_machines(prod_list)
+
+#     machines_per_row = round(math.sqrt(total_assemblers) * math.sqrt(5/3))
+
+#     entities = []
+
+#     prod_node_index = 0
+#     i = 0
+#     j = 0
+
+#     node_assemblers_placed = 0
+#     while total_assemblers_placed < total_assemblers:
+#         if j >= machines_per_row:
+#             i += 1
+#             j = 0
+

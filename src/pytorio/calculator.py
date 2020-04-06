@@ -118,12 +118,15 @@ def module_selector_vanilla_max(recipe_name: str, machine_name: str) -> dict:
     }
 
 
-def which_inserter(rate_required: int):
+def which_inserter(rate_required: int, recipe_name: int = None):
     if rate_required < 2.4:
         return 'inserter'
     elif rate_required < 6.7:
         return 'fast-inserter'
+    elif rate_required < 27.5:
+        return 'stack-inserter'
     else:
+        print('Recipe: ' + recipe_name + ' requires more then 2 io inserters!')
         return 'stack-inserter'
 
 
@@ -261,8 +264,10 @@ def build_production_tree(item_rate: int,
 
             if machine_name != None:
                 production_tree.update({
-                    'input_inserter': which_inserter(total_ingredient_rate_per_machine),
-                    'output_inserter': which_inserter(total_product_rate / machine_amount)
+                    'input_inserter':
+                    which_inserter(total_ingredient_rate_per_machine, recipe_name),
+                    'output_inserter':
+                    which_inserter(total_product_rate / machine_amount, recipe_name)
                 })
 
             #-------------------------------------------------------------------------

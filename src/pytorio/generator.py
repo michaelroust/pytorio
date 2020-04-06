@@ -125,9 +125,9 @@ def generate(prod_list:list):
 
 def generate_with_beacons(prod_list:list):
     def calc_machines_per_row(total_assemblers:int)->int:
-        a = round(math.sqrt(total_assemblers) * 3/5)
+        a = round(math.sqrt(total_assemblers) * (0.5))
         machines_per_column = a if a <= 5 else 5
-        machines_per_row = round(total_assemblers / machines_per_column)
+        machines_per_row = math.ceil(total_assemblers / machines_per_column)
         return machines_per_row, machines_per_column
 
     def generate_beacons(entities, x_start, y_start, beacons_width, beacons_height):
@@ -161,9 +161,9 @@ def generate_with_beacons(prod_list:list):
         barreler_filter_list = []
         for ingr in prod_node['ingredients']:
             if ingr['item_type'] == 'item':
-                requester_filter_list.append(Logistic_Filter(ingr['item_name'], math.ceil(ingr['item_rate']/prod_node_machine_amount) * 50))
+                requester_filter_list.append(Logistic_Filter(ingr['item_name'], math.ceil(ingr['item_rate']/prod_node_machine_amount) * 12))
             else:
-                barreler_filter_list.append(Logistic_Filter(ingr['item_name'] + '-barrel', math.ceil(ingr['item_rate']/prod_node_machine_amount)*2))
+                barreler_filter_list.append(Logistic_Filter(ingr['item_name'] + '-barrel', math.ceil(ingr['item_rate']/prod_node_machine_amount) * 2))
 
         if len(barreler_filter_list) == 0:
             add_single_am3_module(entities, j*3, i*8, prod_node['recipe_name'], requester_filter_list,
@@ -173,7 +173,7 @@ def generate_with_beacons(prod_list:list):
             j += 1
             total_assemblers_placed += 1
         elif len(barreler_filter_list) == 1:
-            add_single_am3_liquid_module(entities, j*3, i*5, prod_node['recipe_name'], requester_filter_list,
+            add_single_am3_liquid_module(entities, j*3, i*8, prod_node['recipe_name'], requester_filter_list,
                                          'empty-' + ingr['item_name'] + '-barrel', barreler_filter_list, 1,
                                          input_inserter=prod_node['input_inserter'], output_inserter=prod_node['output_inserter'],
                                          items=prod_node['machine_modules'])

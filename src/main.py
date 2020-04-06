@@ -70,17 +70,17 @@ def generate_factory():
 #================================================
 
 
-def generate_factory_beacons():
+def generate_factory_beacons(rate, item_name):
     output_folder = 'src/pytorio/resources/misc/'
 
     shared_items = [
-        'iron-ore', 'copper-ore', 'petroleum-gas', 'water', 'light-oil', 'lubricant', 'solid-fuel', 'sulfuric-acid',
-        'plastic-bar'
+        'iron-plate', 'copper-plate', 'petroleum-gas', 'water', 'light-oil', 'lubricant', 'solid-fuel', 'sulfuric-acid',
+        'plastic-bar', 'battery', 'steel-plate', 'electronic-circuit'
     ]
     prefered_recipes = {}
     prefered_machines = ['assembling-machine-3', 'electric-furnace']
 
-    prod_tree = calculator.build_production_tree(1, 'item', 'processing-unit', shared_items, prefered_recipes,
+    prod_tree = calculator.build_production_tree(rate, 'item', item_name, shared_items, prefered_recipes,
                                                  prefered_machines, calculator.module_selector_vanilla_max)
     easy_io.write_file(json.dumps(prod_tree, sort_keys=True, indent=4), output_folder + 'prod_dict.json')
 
@@ -97,4 +97,4 @@ def generate_factory_beacons():
     easy_io.write_file(bp_str, output_folder + 'output.txt')
 
 
-generate_factory_beacons()
+generate_factory_beacons(10, 'utility-science-pack')

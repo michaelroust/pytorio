@@ -65,4 +65,36 @@ def generate_factory():
     easy_io.write_file(bp_str, output_folder + 'output.txt')
 
 
-generate_factory()
+# generate_factory()
+
+#================================================
+
+
+def generate_factory_beacons():
+    output_folder = 'src/pytorio/resources/misc/'
+
+    shared_items = [
+        'iron-ore', 'copper-ore', 'petroleum-gas', 'water', 'light-oil', 'lubricant', 'solid-fuel', 'sulfuric-acid',
+        'plastic-bar'
+    ]
+    prefered_recipes = {}
+    prefered_machines = ['assembling-machine-3', 'electric-furnace']
+
+    prod_tree = calculator.build_production_tree(1, 'item', 'processing-unit', shared_items, prefered_recipes,
+                                                 prefered_machines, calculator.module_selector_vanilla_max)
+    easy_io.write_file(json.dumps(prod_tree, sort_keys=True, indent=4), output_folder + 'prod_dict.json')
+
+    pp.pprint(calculator.list_production_tree_inputs(prod_tree))
+
+    prod_list = calculator.flatten_production_tree(prod_tree)
+    easy_io.write_file(json.dumps(prod_list, sort_keys=True, indent=4), output_folder + 'prod_list.json')
+
+    bp_dict = generator.generate_with_beacons(prod_list)
+    bp_json = encoding.dict_to_json_str(bp_dict)
+    bp_str = encoding.json_str_to_exg_str(bp_json)
+
+    easy_io.write_file(encoding.beatify_json(bp_json), output_folder + 'output.json')
+    easy_io.write_file(bp_str, output_folder + 'output.txt')
+
+
+generate_factory_beacons()

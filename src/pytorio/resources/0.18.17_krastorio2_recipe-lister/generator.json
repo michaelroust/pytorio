@@ -1,0 +1,126 @@
+{
+  "steam-engine" : {
+    "name" : "steam-engine",
+    "localised_name" : [
+      "entity-name.steam-engine"
+    ],
+    "maximum_temperature" : 165,
+    "effectivity" : 1,
+    "fluid_usage_per_tick" : 0.16666666666667,
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 127,
+      "b" : 160,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 0,
+    "pollution" : 0,
+    "max_energy_output" : 750000
+  },
+  "kr-gas-power-station" : {
+    "name" : "kr-gas-power-station",
+    "localised_name" : [
+      "entity-name.kr-gas-power-station"
+    ],
+    "maximum_temperature" : 25,
+    "effectivity" : 1,
+    "fluid_usage_per_tick" : 0.1,
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 127,
+      "b" : 160,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 1.1111111111111e-07,
+    "pollution" : 0
+  },
+  "steam-turbine" : {
+    "name" : "steam-turbine",
+    "localised_name" : [
+      "entity-name.steam-turbine"
+    ],
+    "maximum_temperature" : 415,
+    "effectivity" : 1,
+    "fluid_usage_per_tick" : 0.83333333333333,
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 127,
+      "b" : 160,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 0,
+    "pollution" : 0,
+    "max_energy_output" : 10000000
+  },
+  "kr-advanced-steam-turbine" : {
+    "name" : "kr-advanced-steam-turbine",
+    "localised_name" : [
+      "entity-name.kr-advanced-steam-turbine"
+    ],
+    "maximum_temperature" : 975,
+    "effectivity" : 2.1,
+    "fluid_usage_per_tick" : 1.6666666666667,
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 127,
+      "b" : 160,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 0,
+    "pollution" : 0,
+    "max_energy_output" : 48000000
+  },
+  "creative-mod_energy-source" : {
+    "name" : "creative-mod_energy-source",
+    "localised_name" : [
+      "entity-name.creative-mod_energy-source"
+    ],
+    "maximum_temperature" : 500,
+    "effectivity" : 1,
+    "fluid_usage_per_tick" : 1000000000,
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 127,
+      "b" : 160,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 0,
+    "pollution" : 0,
+    "max_energy_output" : 1.455e+16
+  }
+}

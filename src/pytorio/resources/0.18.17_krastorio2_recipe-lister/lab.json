@@ -1,0 +1,197 @@
+{
+  "lab" : {
+    "name" : "lab",
+    "localised_name" : [
+      "entity-name.lab"
+    ],
+    "energy_usage" : 200000,
+    "lab_inputs" : [
+      "basic-tech-card",
+      "automation-science-pack",
+      "logistic-science-pack",
+      "military-science-pack",
+      "chemical-science-pack"
+    ],
+    "researching_speed" : 1,
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 96,
+      "b" : 145,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 0,
+    "pollution" : 0
+  },
+  "biusart-lab" : {
+    "name" : "biusart-lab",
+    "localised_name" : [
+      "entity-name.biusart-lab"
+    ],
+    "energy_usage" : 250000,
+    "lab_inputs" : [
+      "automation-science-pack",
+      "logistic-science-pack",
+      "military-science-pack",
+      "chemical-science-pack",
+      "production-science-pack",
+      "utility-science-pack"
+    ],
+    "researching_speed" : 1,
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 96,
+      "b" : 145,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 0,
+    "pollution" : 0
+  },
+  "kr-singularity-lab" : {
+    "name" : "kr-singularity-lab",
+    "localised_name" : [
+      "entity-name.kr-singularity-lab"
+    ],
+    "energy_usage" : 10000000,
+    "lab_inputs" : [
+      "production-science-pack",
+      "utility-science-pack",
+      "space-science-pack",
+      "matter-tech-card",
+      "advanced-tech-card",
+      "singularity-tech-card"
+    ],
+    "researching_speed" : 1,
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 96,
+      "b" : 145,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 0,
+    "pollution" : 0
+  },
+  "crash-site-lab-repaired" : {
+    "name" : "crash-site-lab-repaired",
+    "localised_name" : [
+      "entity-name.crash-site-lab-repaired"
+    ],
+    "energy_usage" : 60000,
+    "lab_inputs" : [
+      "automation-science-pack"
+    ],
+    "researching_speed" : 1,
+    "map_color" : {
+      "r" : 0,
+      "g" : 93,
+      "b" : 147,
+      "a" : 255
+    },
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 93,
+      "b" : 147,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 0,
+      "g" : 93,
+      "b" : 147,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 1.1111111111111e-06,
+    "pollution" : 4
+  },
+  "kr-crash-site-lab-repaired" : {
+    "name" : "kr-crash-site-lab-repaired",
+    "localised_name" : [
+      "entity-name.kr-damaged-ship-research-computer"
+    ],
+    "energy_usage" : 60000,
+    "lab_inputs" : [
+      "basic-tech-card"
+    ],
+    "researching_speed" : 1,
+    "map_color" : {
+      "r" : 0,
+      "g" : 93,
+      "b" : 147,
+      "a" : 255
+    },
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 93,
+      "b" : 147,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 0,
+      "g" : 93,
+      "b" : 147,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 1.1111111111111e-06,
+    "pollution" : 4
+  },
+  "creative-mod_creative-lab" : {
+    "name" : "creative-mod_creative-lab",
+    "localised_name" : [
+      "entity-name.creative-mod_creative-lab"
+    ],
+    "energy_usage" : 60000,
+    "lab_inputs" : [
+      "automation-science-pack",
+      "logistic-science-pack",
+      "chemical-science-pack",
+      "military-science-pack",
+      "production-science-pack",
+      "utility-science-pack",
+      "space-science-pack",
+      "basic-tech-card",
+      "matter-tech-card",
+      "advanced-tech-card",
+      "singularity-tech-card"
+    ],
+    "researching_speed" : 1,
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 96,
+      "b" : 145,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "burner_effectivity" : 1,
+    "fuel_categories" : {
+      "chemical" : true
+    },
+    "emissions" : 0,
+    "pollution" : 0
+  }
+}

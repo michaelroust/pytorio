@@ -1,0 +1,46 @@
+{
+  "solar-panel" : {
+    "name" : "solar-panel",
+    "localised_name" : [
+      "entity-name.solar-panel"
+    ],
+    "production" : 100000,
+    "friendly_map_color" : {
+      "r" : 30,
+      "g" : 33,
+      "b" : 35,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 0,
+    "pollution" : 0
+  },
+  "kr-advanced-solar-panel" : {
+    "name" : "kr-advanced-solar-panel",
+    "localised_name" : [
+      "entity-name.kr-advanced-solar-panel"
+    ],
+    "production" : 250000,
+    "friendly_map_color" : {
+      "r" : 30,
+      "g" : 33,
+      "b" : 35,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "drain" : 0,
+    "emissions" : 0,
+    "pollution" : 0
+  }
+}

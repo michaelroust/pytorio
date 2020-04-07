@@ -1,7 +1,8 @@
 
 import json
 
-prototypes_folder = "src/pytorio/resources/0.18.17_recipe-lister/"
+# prototypes_folder = "src/pytorio/resources/0.18.17_recipe-lister/"
+prototypes_folder = "src/pytorio/resources/0.18.17_krastorio2_recipe-lister/"
 
 def load_prototype_file(input_path)->dict:
     with open(input_path) as fin:

@@ -1,0 +1,139 @@
+{
+  "kr-car-grid" : {
+    "name" : "kr-car-grid",
+    "localised_name" : [
+      "equipment-grid-name.kr-car-grid"
+    ],
+    "equipment_categories" : [
+      "universal-equipment",
+      "robot-interaction-equipment",
+      "vehicle-robot-interaction-equipment",
+      "vehicle-equipment",
+      "vehicle-motor"
+    ],
+    "width" : 6,
+    "height" : 6
+  },
+  "kr-locomotive-grid" : {
+    "name" : "kr-locomotive-grid",
+    "localised_name" : [
+      "equipment-grid-name.kr-locomotive-grid"
+    ],
+    "equipment_categories" : [
+      "universal-equipment",
+      "vehicle-equipment",
+      "vehicle-motor"
+    ],
+    "width" : 12,
+    "height" : 12
+  },
+  "kr-tank-grid" : {
+    "name" : "kr-tank-grid",
+    "localised_name" : [
+      "equipment-grid-name.kr-tank-grid"
+    ],
+    "equipment_categories" : [
+      "universal-equipment",
+      "robot-interaction-equipment",
+      "vehicle-robot-interaction-equipment",
+      "vehicle-equipment",
+      "vehicle-motor"
+    ],
+    "width" : 6,
+    "height" : 11
+  },
+  "kr-tank-grid-2" : {
+    "name" : "kr-tank-grid-2",
+    "localised_name" : [
+      "equipment-grid-name.kr-tank-grid-2"
+    ],
+    "equipment_categories" : [
+      "universal-equipment",
+      "robot-interaction-equipment",
+      "vehicle-robot-interaction-equipment",
+      "vehicle-equipment",
+      "vehicle-motor"
+    ],
+    "width" : 12,
+    "height" : 15
+  },
+  "kr-wagons-grid" : {
+    "name" : "kr-wagons-grid",
+    "localised_name" : [
+      "equipment-grid-name.kr-wagons-grid"
+    ],
+    "equipment_categories" : [
+      "universal-equipment",
+      "vehicle-equipment",
+      "robot-interaction-equipment",
+      "vehicle-robot-interaction-equipment"
+    ],
+    "width" : 6,
+    "height" : 16
+  },
+  "large-equipment-grid" : {
+    "name" : "large-equipment-grid",
+    "localised_name" : [
+      "equipment-grid-name.large-equipment-grid"
+    ],
+    "equipment_categories" : [
+      "armor",
+      "universal-equipment",
+      "robot-interaction-equipment"
+    ],
+    "width" : 8,
+    "height" : 8
+  },
+  "medium-equipment-grid" : {
+    "name" : "medium-equipment-grid",
+    "localised_name" : [
+      "equipment-grid-name.medium-equipment-grid"
+    ],
+    "equipment_categories" : [
+      "armor",
+      "universal-equipment",
+      "robot-interaction-equipment"
+    ],
+    "width" : 6,
+    "height" : 6
+  },
+  "mk3-armor-grid" : {
+    "name" : "mk3-armor-grid",
+    "localised_name" : [
+      "equipment-grid-name.mk3-armor-grid"
+    ],
+    "equipment_categories" : [
+      "armor",
+      "universal-equipment",
+      "robot-interaction-equipment"
+    ],
+    "width" : 10,
+    "height" : 10
+  },
+  "mk4-armor-grid" : {
+    "name" : "mk4-armor-grid",
+    "localised_name" : [
+      "equipment-grid-name.mk4-armor-grid"
+    ],
+    "equipment_categories" : [
+      "armor",
+      "universal-equipment",
+      "robot-interaction-equipment"
+    ],
+    "width" : 12,
+    "height" : 12
+  },
+  "small-equipment-grid" : {
+    "name" : "small-equipment-grid",
+    "localised_name" : [
+      "equipment-grid-name.small-equipment-grid"
+    ],
+    "equipment_categories" : [
+      "armor",
+      "universal-equipment",
+      "robot-interaction-equipment"
+    ],
+    "width" : 4,
+    "height" : 4
+  }
+}

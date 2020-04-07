@@ -73,11 +73,24 @@ def generate_factory():
 def generate_factory_beacons(rate, item_name):
     output_folder = 'src/pytorio/resources/misc/'
 
+    # shared_items = [
+    #     'iron-plate', 'copper-plate', 'petroleum-gas', 'water', 'light-oil', 'lubricant', 'solid-fuel', 'sulfuric-acid',
+    #     'plastic-bar', 'battery', 'steel-plate', 'electronic-circuit'
+    # ]
+    # prefered_recipes = {}
+    # prefered_machines = ['assembling-machine-3', 'electric-furnace']
+
     shared_items = [
         'iron-plate', 'copper-plate', 'petroleum-gas', 'water', 'light-oil', 'lubricant', 'solid-fuel', 'sulfuric-acid',
-        'plastic-bar', 'battery', 'steel-plate', 'electronic-circuit'
+        'plastic-bar', 'battery', 'steel-plate', 'sand', 'rare-metals', 'wood'
     ]
-    prefered_recipes = {}
+    prefered_recipes = {
+        'copper-cable': 'copper-cable',
+        'electronic-components': 'electronic-components',
+        'glass': 'glass',
+        'silicon': 'silicon',
+        'wood': 'kr-grow-wood-with-water'
+    }
     prefered_machines = ['assembling-machine-3', 'electric-furnace']
 
     prod_tree = calculator.build_production_tree(rate, 'item', item_name, shared_items, prefered_recipes,
@@ -105,5 +118,7 @@ def generate_factory_beacons(rate, item_name):
 # "utility-science-pack",
 # "space-science-pack",
 
-generate_factory_beacons(10, 'production-science-pack')
+# generate_factory_beacons(10, 'production-science-pack')
 # generate_factory_beacons(10, 'utility-science-pack')
+
+generate_factory_beacons(0.5, 'productivity-module-3')

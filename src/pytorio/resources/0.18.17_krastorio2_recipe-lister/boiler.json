@@ -1,0 +1,54 @@
+{
+  "boiler" : {
+    "name" : "boiler",
+    "localised_name" : [
+      "entity-name.boiler"
+    ],
+    "max_energy_usage" : 1500000,
+    "target_temperature" : 165,
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 96,
+      "b" : 145,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "burner_effectivity" : 1,
+    "fuel_categories" : {
+      "chemical" : true,
+      "vehicle-fuel" : true
+    },
+    "emissions" : 2.2222222222222e-07,
+    "pollution" : 20,
+    "input_fluid" : "water",
+    "output_fluid" : "steam"
+  },
+  "heat-exchanger" : {
+    "name" : "heat-exchanger",
+    "localised_name" : [
+      "entity-name.heat-exchanger"
+    ],
+    "max_energy_usage" : 50000000,
+    "target_temperature" : 415,
+    "friendly_map_color" : {
+      "r" : 0,
+      "g" : 96,
+      "b" : 145,
+      "a" : 255
+    },
+    "enemy_map_color" : {
+      "r" : 255,
+      "g" : 25,
+      "b" : 25,
+      "a" : 255
+    },
+    "pollution" : 0,
+    "input_fluid" : "water",
+    "output_fluid" : "steam"
+  }
+}

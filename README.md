@@ -1,7 +1,7 @@
 
+# Pytorio
 
-## WIP
-Will be more informative soon enough
+## Example Output
 
 1 Blue Circuit / s
 Gen1 factory generator example output:

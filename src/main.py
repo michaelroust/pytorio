@@ -1,5 +1,7 @@
 # The pytorio_playground "main"
 
+import argparse
+
 import pprint, json
 import easy_io
 from pytorio import calculator, encoding, generator
@@ -38,17 +40,22 @@ def decode_example_file():
 #================================================
 
 
-def generate_factory():
+def generate_factory(rate=1, item_name='processing-unit'):
     output_folder = 'src/pytorio/resources/misc/'
 
+    # Use these shared_items instead for on-site smelting.
+    # shared_items = [
+    #     'iron-ore', 'copper-ore', 'petroleum-gas', 'water', 'light-oil', 'lubricant', 'solid-fuel', 'sulfuric-acid',
+    #     'plastic-bar'
+    # ]
     shared_items = [
-        'iron-ore', 'copper-ore', 'petroleum-gas', 'water', 'light-oil', 'lubricant', 'solid-fuel', 'sulfuric-acid',
-        'plastic-bar'
+        'iron-plate', 'copper-plate', 'petroleum-gas', 'water', 'light-oil', 'lubricant', 'solid-fuel', 'sulfuric-acid',
+        'plastic-bar', 'battery', 'steel-plate', 'electronic-circuit',
     ]
     prefered_recipes = {}
     prefered_machines = ['assembling-machine-3', 'electric-furnace']
 
-    prod_tree = calculator.build_production_tree(1, 'item', 'processing-unit', shared_items, prefered_recipes,
+    prod_tree = calculator.build_production_tree(rate, 'item', item_name, shared_items, prefered_recipes,
                                                  prefered_machines)
     easy_io.write_file(json.dumps(prod_tree, sort_keys=True, indent=4), output_folder + 'prod_dict.json')
 
@@ -105,5 +112,26 @@ def generate_factory_beacons(rate, item_name):
 # "utility-science-pack",
 # "space-science-pack",
 
-generate_factory_beacons(10, 'production-science-pack')
-# generate_factory_beacons(10, 'utility-science-pack')
+
+if __name__ == "__main__":
+    # Create argument parser
+    parser = argparse.ArgumentParser(description="A simple example script.")
+    parser.add_argument("rate", type=int, help="Production rate (per second)", default=1)
+    parser.add_argument("item_name", help="Item to produce.")
+    parser.add_argument("-b", action="store_true", help="Generate a beaconed blueprint or not.")
+
+    # Parse arguments
+    args = parser.parse_args()
+
+    if not args.b:
+        generate_factory(args.rate, args.item_name)
+    else:
+        generate_factory_beacons(args.rate, args.item_name)
+
+    print()
+    print("========== Output ==========")
+    print()
+
+    import os
+    os.system('cat src/pytorio/resources/misc/output.txt | pbcopy')
+    os.system('cat src/pytorio/resources/misc/output.txt')
